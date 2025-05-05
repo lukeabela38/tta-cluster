@@ -20,8 +20,8 @@ $ microk8s install
 ## Docker
 
 ```bash
-$ docker build -t python-fast-api .
-$ docker run -it --rm -v $(pwd)/app:/code/app -p 80:80 python-fast-api
+$ DOCKER_BUILDKIT=1 docker build -t python-fast-api .
+$ docker run -it --rm -v $(pwd)/app:/code/app -p 3000:3000 python-fast-api
 ```
 
 ```bash
