@@ -17,6 +17,11 @@ $ brew install ubuntu/microk8s/microk8s
 $ microk8s install
 ```
 
+Forward cluster to microk8s
+```bash
+microk8s kubectl -n argocd port-forward svc/argocd-server 8081:443
+```
+
 ## Docker
 
 ```bash
